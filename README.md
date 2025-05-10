@@ -29,6 +29,13 @@
 
 ![Alt text](image.png).
 
+- deploy the code on lambda function
+- add sqs trigger and choose OrderQueue
+
+## database after the test 
+
+![Alt text](database.png).
+
 
 
 
