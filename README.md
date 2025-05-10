@@ -7,13 +7,29 @@
 - c reate table 
 - name the table Orders
 - and set partion key = orderId
-![Alt text](image.png)
+![Alt text](dynamo.png)
   ## second setup the Queue
   - navigate to sqs
   - first create a queue and name DLQ QUEUE this will be used to clear the primary queue
   - then I created a second Queue named OrderQueue using standerd settings and a visiability timout of 30 seconds
   - add the DLQ queue to the OrderQueue
+  - sqs screenshot with messages 
 ![Alt text](sqs.png).
+## third step sns setup
+- create a topic named OrderTopic
+- add the OrderQueue as a subscription
+- ![Alt text](topic.png).
+![Alt text](subscription.png).
+## creating lambda function
+- create function
+- give it a name mine is orderFunction
+- choose runtime node.js 22.x
+- defualt permmsions then deploy
+- after that we go to configuration > perrmissions > excution role > add perrmission > attach Policy > give sqs and dynamo db full access
+
+![Alt text](image.png).
+
+
 
 
 
